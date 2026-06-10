@@ -117,7 +117,7 @@ export default function Hero() {
                 src={profile.photo}
                 onError={(e) => { if (e.currentTarget.src !== FALLBACK_PHOTO) e.currentTarget.src = FALLBACK_PHOTO; }}
                 alt="Shuchi Shukla portrait"
-                className="w-full h-[520px] object-cover grayscale contrast-110"
+                className="w-full h-[520px] object-cover object-top"
                 loading="eager"
                 data-testid="hero-portrait"
               />
