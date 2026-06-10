@@ -1,47 +1,40 @@
-import { useEffect } from "react";
 import "@/App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
-import { HOME } from "@/constants/testIds";
-
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+import { Toaster } from "sonner";
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import About from "@/components/About";
+import Experience from "@/components/Experience";
+import Projects from "@/components/Projects";
+import TechStack from "@/components/TechStack";
+import Achievements from "@/components/Achievements";
+import GitHubShowcase from "@/components/GitHubShowcase";
+import Blog from "@/components/Blog";
+import Contact from "@/components/Contact";
+import Chatbot from "@/components/Chatbot";
 
 const Home = () => {
-  const helloWorldApi = async () => {
-    try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
-    }
-  };
-
-  useEffect(() => {
-    helloWorldApi();
-  }, []);
-
   return (
-    <div>
-      <header className="App-header">
-        <a
-          data-testid={HOME.emergentLink}
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-      </header>
-    </div>
+    <main data-testid="home" className="relative bg-black text-white min-h-screen overflow-x-hidden">
+      <Navbar />
+      <Hero />
+      <About />
+      <Experience />
+      <Projects />
+      <TechStack />
+      <Achievements />
+      <GitHubShowcase />
+      <Blog />
+      <Contact />
+      <Chatbot />
+    </main>
   );
 };
 
 function App() {
   return (
     <div className="App">
+      <Toaster theme="dark" position="bottom-center" richColors />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />}>
