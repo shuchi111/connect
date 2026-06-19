@@ -299,45 +299,48 @@ export const achievements = [
 
 export const blogs = [
   {
-    title: "Designing Production-Grade RAG: Beyond the Demo",
-    category: "RAG",
-    excerpt:
-      "What actually breaks in enterprise RAG — chunking, hybrid search, evals, and the citation contract.",
-    readTime: "8 min read",
-  },
-  {
-    title: "Agentic AI Patterns I Actually Ship",
+    title: "Breaking the Paper Ceiling: How Agentic Document Extraction (ADE) is Rewiring Healthcare Data",
     category: "Agentic AI",
+    source: "Medium",
     excerpt:
-      "Router agents, tool budgets, and why most multi-agent systems fail without strict schemas.",
-    readTime: "6 min read",
+      "How agentic document extraction pipelines are unlocking unstructured clinical data — and what makes them production-grade in healthcare.",
+    readTime: "Medium · 8 min",
+    url: "https://medium.com/@shuchi0_0/breaking-the-paper-ceiling-how-agentic-document-extraction-ade-is-rewiring-healthcare-data-aaf9ce1c06ea",
   },
   {
-    title: "Evaluating LLM Apps: A Practitioner's Harness",
+    title: "Testing the Capabilities of AI Agents in ML Engineering using MLE-Bench",
     category: "LLM Engineering",
+    source: "Medium",
     excerpt:
-      "Faithfulness, answer relevance, and offline → online eval loops that actually catch regressions.",
-    readTime: "10 min read",
+      "A practitioner's walk through MLE-Bench — what it actually measures, where agents shine, and where they still fall apart.",
+    readTime: "Medium · 7 min",
+    url: "https://medium.com/@shuchi0_0/testing-the-capabilities-of-ai-agents-in-machine-learning-engineering-using-mle-bench-4e1461622b3f",
   },
   {
-    title: "From Notebook to Production: An MLOps Walkthrough",
-    category: "MLOps",
+    title: "Add Long-Term Memory to AI Coding Agents",
+    category: "Agentic AI",
+    source: "Medium",
     excerpt:
-      "How I take an XGBoost or fine-tuned model from a Jupyter cell to a versioned, monitored service.",
-    readTime: "7 min read",
+      "Designing long-term memory for coding agents — retrieval, summarisation, and the contract between memory and the planner loop.",
+    readTime: "Medium · 6 min",
+    url: "https://medium.com/@shuchi0_0/add-long-term-memory-to-ai-coding-agents-b703ef770603",
   },
   {
-    title: "Vision in the Wild: Lessons from Multi-Zone Detection",
-    category: "Computer Vision",
+    title: "Python · SymPy · Mathematics",
+    category: "Python",
+    source: "LinkedIn",
     excerpt:
-      "Edge-efficient detectors, tracker quirks, and operator UX for real-time vision systems.",
-    readTime: "5 min read",
+      "Quick exploration of symbolic mathematics with SymPy — clean code patterns for math-first Python workflows.",
+    readTime: "LinkedIn post",
+    url: "https://www.linkedin.com/posts/shuchi-shukla_python-sympy-mathematics-activity-7304229470981304320-2leJ",
   },
   {
-    title: "Research Notes: Attention, Retrieval, and Long Context",
-    category: "AI Research Notes",
+    title: "Web Scraping · No-Code Easy",
+    category: "Automation",
+    source: "LinkedIn",
     excerpt:
-      "A working log of papers I'm reading and which ideas survive contact with production.",
-    readTime: "Living doc",
+      "Fast, low-effort web scraping tactics for analysts and data scientists — when no-code is the right call.",
+    readTime: "LinkedIn post",
+    url: "https://www.linkedin.com/posts/shuchi-shukla_webscraping-nocodeeasy-activity-7307859694289567744-5tS4",
   },
 ];

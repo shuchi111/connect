@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Github, ArrowUpRight } from "lucide-react";
 import { projects } from "../data/portfolio";
 
 function ArchDiagram({ steps }) {
@@ -45,16 +44,6 @@ export default function Projects() {
                   <div className="font-mono text-[11px] uppercase tracking-widest text-white/40">Project {String(i + 1).padStart(2, "0")}</div>
                   <h3 className="mt-2 font-display text-2xl tracking-tight">{p.title}</h3>
                 </div>
-                <a
-                  href={p.github}
-                  target="_blank"
-                  rel="noreferrer"
-                  data-testid={`project-${i}-github`}
-                  className="shrink-0 text-white/50 hover:text-white transition-colors"
-                  aria-label="GitHub"
-                >
-                  <Github size={18} />
-                </a>
               </div>
               <p className="mt-3 text-white/65 leading-relaxed text-sm">{p.blurb}</p>
 
@@ -82,9 +71,6 @@ export default function Projects() {
                 <div>
                   <div className="font-mono text-[10px] uppercase tracking-widest text-white/40 mb-1.5">Impact</div>
                   <div className="text-emerald-300 text-sm">{p.impact}</div>
-                  <a href={p.github} target="_blank" rel="noreferrer" className="mt-3 inline-flex items-center gap-1 text-xs text-white/60 hover:text-white">
-                    View source <ArrowUpRight size={12} />
-                  </a>
                 </div>
               </div>
             </motion.article>
