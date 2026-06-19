@@ -98,7 +98,7 @@ export const projects = [
       "Faithfulness, answer-relevance and groundedness evals",
     ],
     impact: "Higher answer faithfulness & lower hallucination on long-tail enterprise queries",
-    github: "https://github.com/shuchi111",
+    github: "https://github.com/shuchi111/GenAI-Projects",
     architecture: [
       "User Query",
       "Planner Agent",
@@ -106,6 +106,27 @@ export const projects = [
       "Reranker → Tool Router",
       "Reasoner + Self-Critic",
       "Grounded Answer + Citations",
+    ],
+  },
+  {
+    title: "TradingAgents · Multi-Agent LLM Financial Trading",
+    blurb:
+      "A multi-agent LLM framework for financial trading: research analysts, risk managers, and a trader agent collaborate to make calibrated, explainable trade decisions on market data.",
+    stack: ["LangGraph", "OpenAI", "Pandas", "yfinance", "Python", "Backtesting"],
+    learnings: [
+      "Role-specialised agents (analyst · risk · trader · debater)",
+      "Structured tool-calling over market data + indicators",
+      "Backtest harness + portfolio-aware decision policies",
+      "Cost-aware LLM orchestration with reasoning budgets",
+    ],
+    impact: "Open-source framework — explainable agentic trading research",
+    github: "https://github.com/shuchi111/TradingAgents-Fintech",
+    architecture: [
+      "Market Data · Indicators",
+      "Analyst Agents (Fundamental · Technical · News)",
+      "Debate / Reflection Layer",
+      "Risk Manager Agent",
+      "Trader Agent → Order",
     ],
   },
   {
@@ -119,7 +140,7 @@ export const projects = [
       "Guarded LLM output schemas for sales handoff",
     ],
     impact: "30% lead conversion uplift in pilot deployment",
-    github: "https://github.com/shuchi111",
+    github: "https://github.com/shuchi111/GenAI-Projects",
     architecture: [
       "User Intent",
       "Router Agent",
@@ -160,7 +181,7 @@ export const projects = [
       "Streaming + citation rendering",
     ],
     impact: "18% accuracy uplift, 20% support process efficiency",
-    github: "https://github.com/shuchi111",
+    github: "https://github.com/shuchi111/GenAI-Projects",
     architecture: [
       "Docs (Confluence)",
       "Embed + Index (Pinecone)",
@@ -180,7 +201,7 @@ export const projects = [
       "PyQt6 operator dashboard",
     ],
     impact: "Real-time alerts across configurable zones",
-    github: "https://github.com/shuchi111",
+    github: "https://github.com/shuchi111/Multi-Zone-Intrusion-Detector",
     architecture: [
       "Camera Stream",
       "YOLOv4-Tiny Detect",

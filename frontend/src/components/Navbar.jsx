@@ -16,11 +16,30 @@ const links = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [active, setActive] = useState("");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    const ids = links.map((l) => l.href.slice(1));
+    const obs = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (visible) setActive(`#${visible.target.id}`);
+      },
+      { rootMargin: "-40% 0px -55% 0px", threshold: [0, 0.25, 0.5, 0.75, 1] }
+    );
+    ids.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) obs.observe(el);
+    });
+    return () => obs.disconnect();
   }, []);
 
   return (
@@ -39,16 +58,28 @@ export default function Navbar() {
         </a>
 
         <div className="hidden md:flex items-center gap-1">
-          {links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              data-testid={`nav-link-${l.label.toLowerCase()}`}
-              className="px-3 py-2 text-sm text-white/70 hover:text-white transition-colors"
-            >
-              {l.label}
-            </a>
-          ))}
+          {links.map((l) => {
+            const isActive = active === l.href;
+            return (
+              <a
+                key={l.href}
+                href={l.href}
+                data-testid={`nav-link-${l.label.toLowerCase()}`}
+                className={`relative px-3 py-2 text-sm transition-colors ${
+                  isActive ? "text-white" : "text-white/55 hover:text-white"
+                }`}
+              >
+                {l.label}
+                {isActive && (
+                  <motion.span
+                    layoutId="nav-active"
+                    className="absolute left-3 right-3 -bottom-0.5 h-px bg-gradient-to-r from-blue-400 via-violet-400 to-cyan-400"
+                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                  />
+                )}
+              </a>
+            );
+          })}
           <a
             href="#contact"
             data-testid="nav-cta"

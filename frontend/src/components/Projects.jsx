@@ -26,7 +26,7 @@ export default function Projects() {
             <div className="font-mono text-[11px] tracking-[0.3em] uppercase text-white/40">/ 03 · projects</div>
             <h2 className="mt-4 font-display text-4xl sm:text-5xl tracking-tight">Featured systems.</h2>
           </div>
-          <div className="hidden md:block text-sm text-white/40 font-mono">5 selected · production-tested</div>
+          <div className="hidden md:block text-sm text-white/40 font-mono">{projects.length} selected · production-tested</div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-6">
