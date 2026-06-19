@@ -8,7 +8,6 @@ import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 import TechStack from "@/components/TechStack";
 import Achievements from "@/components/Achievements";
-import GitHubShowcase from "@/components/GitHubShowcase";
 import Blog from "@/components/Blog";
 import Contact from "@/components/Contact";
 import Chatbot from "@/components/Chatbot";
@@ -23,7 +22,6 @@ const Home = () => {
       <Projects />
       <TechStack />
       <Achievements />
-      <GitHubShowcase />
       <Blog />
       <Contact />
       <Chatbot />
