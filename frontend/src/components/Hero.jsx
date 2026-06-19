@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Download, Github, Linkedin, Mail, Twitter, BookOpen } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Mail, Twitter, BookOpen } from "lucide-react";
 import NeuralBackground from "./NeuralBackground";
 import Typewriter from "./Typewriter";
 import { profile } from "../data/portfolio";
@@ -61,17 +61,9 @@ export default function Hero() {
               <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
             </a>
             <a
-              href={profile.resumeUrl}
-              download
-              data-testid="hero-cta-resume"
-              className="inline-flex items-center gap-2 border border-white/15 text-white px-5 py-3 hover:bg-white/5 hover:border-white/30 transition-colors"
-            >
-              <Download size={16} /> Download resume
-            </a>
-            <a
               href="#contact"
               data-testid="hero-cta-contact"
-              className="inline-flex items-center gap-2 text-white/70 hover:text-white px-3 py-3 transition-colors"
+              className="inline-flex items-center gap-2 border border-white/15 text-white px-5 py-3 hover:bg-white/5 hover:border-white/30 transition-colors"
             >
               Contact →
             </a>
