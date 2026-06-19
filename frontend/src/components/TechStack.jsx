@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { techStack } from "../data/portfolio";
+import SectionUnderline from "./SectionUnderline";
 
 export default function TechStack() {
   return (
@@ -9,6 +10,7 @@ export default function TechStack() {
           <div>
             <div className="font-mono text-[11px] tracking-[0.3em] uppercase text-white/40">/ 04 · stack</div>
             <h2 className="mt-4 font-display text-4xl sm:text-5xl tracking-tight">Tools I reach for.</h2>
+            <SectionUnderline />
           </div>
         </div>
 

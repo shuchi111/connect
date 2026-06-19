@@ -11,10 +11,12 @@ import Achievements from "@/components/Achievements";
 import Blog from "@/components/Blog";
 import Contact from "@/components/Contact";
 import Chatbot from "@/components/Chatbot";
+import ScrollProgress from "@/components/ScrollProgress";
 
 const Home = () => {
   return (
     <main data-testid="home" className="relative bg-black text-white min-h-screen overflow-x-hidden">
+      <ScrollProgress />
       <Navbar />
       <Hero />
       <About />

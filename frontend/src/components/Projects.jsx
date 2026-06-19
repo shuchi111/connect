@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { projects } from "../data/portfolio";
+import TiltCard from "./TiltCard";
+import SectionUnderline from "./SectionUnderline";
 
 function ArchDiagram({ steps }) {
   return (
@@ -24,21 +26,25 @@ export default function Projects() {
           <div>
             <div className="font-mono text-[11px] tracking-[0.3em] uppercase text-white/40">/ 03 · projects</div>
             <h2 className="mt-4 font-display text-4xl sm:text-5xl tracking-tight">Featured systems.</h2>
+            <SectionUnderline />
           </div>
           <div className="hidden md:block text-sm text-white/40 font-mono">{projects.length} selected · production-tested</div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-6">
           {projects.map((p, i) => (
-            <motion.article
+            <motion.div
               key={p.title}
               initial={{ opacity: 0, y: 18 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.5, delay: (i % 2) * 0.08 }}
-              data-testid={`project-${i}`}
-              className="group relative bg-zinc-950 border border-white/10 p-6 md:p-7 hover:border-white/25 transition-all"
             >
+              <TiltCard
+                data-testid={`project-${i}`}
+                strength={4}
+                className="group relative bg-zinc-950 border border-white/10 p-6 md:p-7 hover:border-white/25 transition-colors h-full"
+              >
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <div className="font-mono text-[11px] uppercase tracking-widest text-white/40">Project {String(i + 1).padStart(2, "0")}</div>
@@ -73,7 +79,8 @@ export default function Projects() {
                   <div className="text-emerald-300 text-sm">{p.impact}</div>
                 </div>
               </div>
-            </motion.article>
+              </TiltCard>
+            </motion.div>
           ))}
         </div>
       </div>

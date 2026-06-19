@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { aboutParagraphs } from "../data/portfolio";
 import CountUp from "./CountUp";
+import SectionUnderline from "./SectionUnderline";
 
 export default function About() {
   return (
@@ -13,6 +14,7 @@ export default function About() {
             <br />
             <span className="text-white/50">Production-obsessed.</span>
           </h2>
+          <SectionUnderline />
           <div className="mt-8 grid grid-cols-3 gap-4">
             {[
               { k: "3", l: "Companies" },

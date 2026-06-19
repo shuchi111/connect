@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { experience } from "../data/portfolio";
 import CountUp from "./CountUp";
+import SectionUnderline from "./SectionUnderline";
 
 export default function Experience() {
   return (
@@ -10,6 +11,7 @@ export default function Experience() {
           <div>
             <div className="font-mono text-[11px] tracking-[0.3em] uppercase text-white/40">/ 02 · experience</div>
             <h2 className="mt-4 font-display text-4xl sm:text-5xl tracking-tight">Shipped, measured, learned.</h2>
+            <SectionUnderline />
           </div>
           <div className="hidden md:block text-sm text-white/40 font-mono">3 roles · 1.5 yrs</div>
         </div>

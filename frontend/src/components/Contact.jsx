@@ -4,6 +4,7 @@ import { Mail, Github, Linkedin, Send, Twitter, BookOpen } from "lucide-react";
 import axios from "axios";
 import { toast } from "sonner";
 import { profile } from "../data/portfolio";
+import SectionUnderline from "./SectionUnderline";
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
@@ -39,6 +40,7 @@ export default function Contact() {
             <br />
             <span className="text-white/50">Let&apos;s connect.</span>
           </h2>
+          <SectionUnderline />
 
           <div className="mt-8 space-y-3">
             <a href={`mailto:${profile.email}`} data-testid="contact-email" className="group flex items-center gap-3 text-white/75 hover:text-white">

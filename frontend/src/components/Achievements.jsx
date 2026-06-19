@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Trophy } from "lucide-react";
 import { achievements } from "../data/portfolio";
+import SectionUnderline from "./SectionUnderline";
 
 export default function Achievements() {
   return (
@@ -10,6 +11,7 @@ export default function Achievements() {
           <div>
             <div className="font-mono text-[11px] tracking-[0.3em] uppercase text-white/40">/ 05 · awards</div>
             <h2 className="mt-4 font-display text-4xl sm:text-5xl tracking-tight">Recognized work.</h2>
+            <SectionUnderline />
           </div>
         </div>
 

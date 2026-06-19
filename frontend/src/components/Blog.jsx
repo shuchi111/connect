@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, BookOpen, Linkedin } from "lucide-react";
 import { blogs } from "../data/portfolio";
+import SectionUnderline from "./SectionUnderline";
 
 const SourceIcon = ({ source }) => {
   if (source === "LinkedIn") return <Linkedin size={12} />;
@@ -15,6 +16,7 @@ export default function Blog() {
           <div>
             <div className="font-mono text-[11px] tracking-[0.3em] uppercase text-white/40">/ 06 · writing</div>
             <h2 className="mt-4 font-display text-4xl sm:text-5xl tracking-tight">Notes from the build.</h2>
+            <SectionUnderline />
           </div>
           <div className="hidden md:block text-sm text-white/40 font-mono">essays · medium · linkedin</div>
         </div>
