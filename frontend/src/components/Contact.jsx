@@ -121,11 +121,6 @@ export default function Contact() {
           </button>
         </motion.form>
       </div>
-
-      <div className="max-w-7xl mx-auto px-6 md:px-10 mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-white/40 font-mono">
-        <div>© {new Date().getFullYear()} Shuchi Shukla · Built with React + FastAPI</div>
-        <div>v1.0.0 · ai_engineer @ shuchi.ai</div>
-      </div>
     </section>
   );
 }
