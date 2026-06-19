@@ -29,17 +29,15 @@ export const experience = [
     period: "Jul 2025 — Present",
     location: "Remote · Global",
     summary:
-      "Building production AI for global clients (RateCity AU, ProjectPro US, Fi Money IN, Move Up FR) — AI Agents, RAG, recommendation engines, CTR optimisation, forecasting, and A/B testing at scale.",
+      "Building production AI for global clients (RateCity AU, ProjectPro US, Fi Money IN, Move Up FR) — AI Agents, RAG, end-to-end ML workflows, and NLP systems on real-world datasets.",
     highlights: [
       "AI Agents · autonomous decision-making systems",
       "RAG solutions over proprietary enterprise data",
-      "Recommendation engines + dynamic ranking (revenue-aware)",
-      "Ad / CTR optimisation & personalisation at scale",
-      "Forecasting + statistical ML (classification, regression)",
-      "MarTech / campaign intelligence + A/B testing frameworks",
       "Sports analytics — football match prediction project",
-      "End-to-end ML pipelines (ingestion → features → eval)",
-      "XGBoost · NLP · sentiment analysis · MLE-Bench",
+      "Built end-to-end ML workflows (EDA, feature engineering, model training, evaluation) using Scikit-learn and XGBoost",
+      "Developed NLP-based models for text classification and sentiment analysis to extract insights from unstructured data",
+      "Applied cross-validation, hyperparameter tuning, and error analysis to improve model generalization and reduce overfitting",
+      "Working on MLE-Bench benchmark tasks and Kaggle-style competitions, optimising feature engineering and ensemble strategies",
     ],
     metrics: [
       { label: "Latency at 10k QPS", value: "<100ms" },
