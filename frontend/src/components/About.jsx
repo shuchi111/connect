@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { aboutParagraphs } from "../data/portfolio";
+import CountUp from "./CountUp";
 
 export default function About() {
   return (
@@ -15,11 +16,11 @@ export default function About() {
           <div className="mt-8 grid grid-cols-3 gap-4">
             {[
               { k: "3", l: "Companies" },
-              { k: "5+", l: "AI Systems shipped" },
+              { k: "7+", l: "AI Systems shipped" },
               { k: "100%", l: "End-to-end" },
             ].map((s) => (
               <div key={s.l} className="border-l border-white/10 pl-3">
-                <div className="font-display text-3xl">{s.k}</div>
+                <div className="font-display text-3xl"><CountUp value={s.k} /></div>
                 <div className="text-[11px] uppercase tracking-widest text-white/40">{s.l}</div>
               </div>
             ))}

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Download, Github, Linkedin, Mail, Twitter, BookOpen } from "lucide-react";
 import NeuralBackground from "./NeuralBackground";
+import Typewriter from "./Typewriter";
 import { profile } from "../data/portfolio";
 
 const FALLBACK_PHOTO =
@@ -124,7 +125,9 @@ export default function Hero() {
               <div className="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-black via-black/80 to-transparent">
                 <div className="flex items-center justify-between font-mono text-[11px] uppercase tracking-widest text-white/60">
                   <span>$ whoami</span>
-                  <span className="text-emerald-400">→ ai_engineer</span>
+                  <span className="text-emerald-400">
+                    → <Typewriter phrases={["ai_engineer", "rag_builder", "agentic_ai", "ml_researcher"]} typeSpeed={70} deleteSpeed={30} holdMs={1500} />
+                  </span>
                 </div>
                 <div className="mt-1 font-display text-lg text-white">{profile.name}</div>
                 <div className="text-xs text-white/55">{profile.title}</div>

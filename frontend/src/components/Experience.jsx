@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { experience } from "../data/portfolio";
+import CountUp from "./CountUp";
 
 export default function Experience() {
   return (
@@ -46,11 +47,15 @@ export default function Experience() {
                 </ul>
                 {e.metrics.length > 0 && (
                   <div className={`mt-4 flex flex-wrap gap-2 ${i % 2 === 0 ? "md:justify-start" : "md:justify-end"}`}>
-                    {e.metrics.map((m) => (
-                      <span key={m.label} className="font-mono text-[11px] uppercase tracking-widest border border-emerald-400/30 text-emerald-300 px-2.5 py-1">
-                        {m.value} · {m.label}
-                      </span>
-                    ))}
+                    {e.metrics.map((m) => {
+                      const hasPlus = m.value.startsWith("+");
+                      const numericPart = hasPlus ? m.value.slice(1) : m.value;
+                      return (
+                        <span key={m.label} className="font-mono text-[11px] uppercase tracking-widest border border-emerald-400/30 text-emerald-300 px-2.5 py-1">
+                          {hasPlus ? "+" : ""}<CountUp value={numericPart} /> · {m.label}
+                        </span>
+                      );
+                    })}
                   </div>
                 )}
               </div>

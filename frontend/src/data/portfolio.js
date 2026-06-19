@@ -290,7 +290,7 @@ export const techStack = [
 export const achievements = [
   { title: "GHCI Scholar 2024", note: "Grace Hopper Celebration India scholarship cohort." },
   { title: "Google Women Techmakers", note: "Active member of the global WTM community." },
-  { title: "Winner — CGCJ Hackathon", note: "First place in inter-college hackathon." },
+  { title: "Winner — CGC-J Hackathon", note: "First place in a team of 2 · ₹20K prize money." },
   { title: "Solving for India — Finalist", note: "Nationwide builder competition finalist." },
   { title: "MongoDB Competition Winner", note: "Best use of MongoDB Atlas + Vector Search." },
   { title: "157-Day GFG Streak", note: "Consecutive daily problem-solving on GeeksforGeeks." },
