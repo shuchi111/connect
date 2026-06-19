@@ -6,7 +6,7 @@ export const profile = {
     "Building Intelligent Systems with LLMs, RAG, Multi-Agent Workflows, and Machine Learning.",
   heroStatement:
     "I build production-ready AI systems that combine Machine Learning, LLMs, RAG architectures, and autonomous agents to solve real business problems.",
-  photo: "/shuchi.jpg",
+  photo: "/shuchi.png",
   email: "shuchis9999@gmail.com",
   github: "https://github.com/shuchi111",
   linkedin: "https://www.linkedin.com/in/shuchi-shukla",
