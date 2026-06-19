@@ -22,7 +22,7 @@ export default function Hero() {
             className="font-mono text-[11px] tracking-[0.25em] uppercase text-white/50 mb-6"
           >
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-400 mr-2 animate-pulse" />
-            Available for AI Engineering roles · {profile.location}
+            Available to join global opportunities in tech · India · Onsite / Hybrid / Remote
           </motion.div>
 
           <motion.h1
