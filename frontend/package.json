@@ -1,8 +1,8 @@
 {
-  "name": "shuchi-portfolio",
+  "name": "connect",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://shuchi111.github.io/app",
+  "homepage": "https://shuchi111.github.io/connect",
   "dependencies": {
     "axios": "1.8.4",
     "framer-motion": "11.18.0",

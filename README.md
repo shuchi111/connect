@@ -1,8 +1,8 @@
-# Shuchi Shukla — Portfolio
+# Shuchi Shukla
 
 Personal portfolio site for **Shuchi Shukla**, AI Engineer · Data Scientist · Agentic AI Builder.
 
-**Live:** [shuchi111.github.io/app](https://shuchi111.github.io/app/)
+**Live:** [shuchi111.github.io/connect](https://shuchi111.github.io/connect/)
 
 Built with React, Tailwind CSS, and Framer Motion.
 
@@ -14,7 +14,7 @@ yarn install
 yarn start
 ```
 
-Open [http://localhost:3000/app](http://localhost:3000/app)
+Open [http://localhost:3000/connect](http://localhost:3000/connect)
 
 ## Contact
 
