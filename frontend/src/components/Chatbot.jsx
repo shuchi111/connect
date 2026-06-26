@@ -2,8 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageSquare, X, Send, Sparkles } from "lucide-react";
 import axios from "axios";
-
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+import { API } from "../lib/api";
 const SESSION_KEY = "shuchi_chat_session";
 
 function genId() {
@@ -41,6 +40,17 @@ export default function Chatbot() {
     setMessages((m) => [...m, { role: "user", content: text }]);
     setBusy(true);
     try {
+      if (!API) {
+        setMessages((m) => [
+          ...m,
+          {
+            role: "assistant",
+            content:
+              "The live AI assistant needs a hosted backend. Email shuchis9999@gmail.com or browse the portfolio sections for projects, experience, and skills.",
+          },
+        ]);
+        return;
+      }
       const { data } = await axios.post(`${API}/chat`, { session_id: sessionId, message: text });
       setMessages((m) => [...m, { role: "assistant", content: data.reply || "(no reply)" }]);
     } catch (e) {

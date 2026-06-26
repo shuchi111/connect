@@ -4,9 +4,8 @@ import { Mail, Github, Linkedin, Send, Twitter, BookOpen } from "lucide-react";
 import axios from "axios";
 import { toast } from "sonner";
 import { profile } from "../data/portfolio";
+import { API } from "../lib/api";
 import SectionUnderline from "./SectionUnderline";
-
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -20,6 +19,15 @@ export default function Contact() {
     }
     setBusy(true);
     try {
+      if (!API) {
+        const subject = encodeURIComponent(`Portfolio contact from ${form.name}`);
+        const body = encodeURIComponent(
+          `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`
+        );
+        window.location.href = `mailto:${profile.email}?subject=${subject}&body=${body}`;
+        toast.success("Opening your email app to send the message.");
+        return;
+      }
       await axios.post(`${API}/contact`, form);
       toast.success("Message sent. I will get back soon.");
       setForm({ name: "", email: "", message: "" });

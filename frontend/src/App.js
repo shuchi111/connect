@@ -1,5 +1,4 @@
 import "@/App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Toaster } from "sonner";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
@@ -13,35 +12,23 @@ import Contact from "@/components/Contact";
 import Chatbot from "@/components/Chatbot";
 import ScrollProgress from "@/components/ScrollProgress";
 
-const Home = () => {
-  return (
-    <main data-testid="home" className="relative bg-black text-white min-h-screen overflow-x-hidden">
-      <ScrollProgress />
-      <Navbar />
-      <Hero />
-      <About />
-      <Experience />
-      <Projects />
-      <TechStack />
-      <Achievements />
-      <Blog />
-      <Contact />
-      <Chatbot />
-    </main>
-  );
-};
-
 function App() {
   return (
     <div className="App">
       <Toaster theme="dark" position="bottom-center" richColors />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+      <main data-testid="home" className="relative bg-black text-white min-h-screen overflow-x-hidden">
+        <ScrollProgress />
+        <Navbar />
+        <Hero />
+        <About />
+        <Experience />
+        <Projects />
+        <TechStack />
+        <Achievements />
+        <Blog />
+        <Contact />
+        <Chatbot />
+      </main>
     </div>
   );
 }

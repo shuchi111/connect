@@ -1,4 +1,6 @@
 // Portfolio data for Shuchi Shukla
+const publicUrl = process.env.PUBLIC_URL || "";
+
 export const profile = {
   name: "Shuchi Shukla",
   title: "AI Engineer · Data Scientist · Agentic AI Builder",
@@ -6,13 +8,13 @@ export const profile = {
     "Building Intelligent Systems with LLMs, RAG, Multi-Agent Workflows, and Machine Learning.",
   heroStatement:
     "I build production-ready AI systems that combine Machine Learning, LLMs, RAG architectures, and autonomous agents to solve real business problems.",
-  photo: "/shuchi.png",
+  photo: `${publicUrl}/shuchi.png`,
   email: "shuchis9999@gmail.com",
   github: "https://github.com/shuchi111",
   linkedin: "https://www.linkedin.com/in/shuchi-shukla",
   medium: "https://medium.com/@shuchi0_0",
   twitter: "https://x.com/shuchi_0_0",
-  resumeUrl: "/Shuchi_Shukla_Resume.pdf",
+  resumeUrl: `${publicUrl}/Shuchi_Shukla_Resume.pdf`,
   location: "India · Remote",
 };
 
