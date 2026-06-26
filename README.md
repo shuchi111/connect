@@ -95,21 +95,28 @@ GitHub Pages on the free plan requires a **public** repository for personal site
 
 Go to **Settings → General → Change repository visibility → Public**.
 
-### 3. Enable GitHub Pages (required — fixes 404 deploy error)
+### 3. Enable GitHub Pages (required)
 
 1. Open https://github.com/shuchi111/app/settings/pages
-2. Under **Build and deployment → Source**, select **GitHub Actions**
-3. Save — do **not** choose "Deploy from a branch"
+2. Under **Build and deployment → Source**, choose **Deploy from a branch**
+3. Set **Branch** to **`gh-pages`** and folder to **`/ (root)`**
+4. Click **Save**
 
-Every push to `main` triggers the workflow in `.github/workflows/deploy-pages.yml`.
+The workflow pushes the built site to the `gh-pages` branch automatically.
 
-### 4. Re-run the workflow
+### 4. Push code and wait for the workflow
 
-After enabling Pages, go to **Actions → Deploy portfolio to GitHub Pages → Re-run all jobs**.
+```bash
+git add .
+git commit -m "Fix GitHub Pages deployment"
+git push origin main
+```
+
+Go to **Actions** and wait for a green checkmark.
 
 ### 5. Verify
 
-- Check the **Actions** tab for a green build
+- **Settings → Pages** should show: *Your site is live at...*
 - Visit [https://shuchi111.github.io/app/](https://shuchi111.github.io/app/)
 
 ---
