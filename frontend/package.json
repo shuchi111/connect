@@ -2,7 +2,7 @@
   "name": "shuchi-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://shuchi111.github.io/portfolio",
+  "homepage": "https://shuchi111.github.io/app",
   "dependencies": {
     "axios": "1.8.4",
     "framer-motion": "11.18.0",

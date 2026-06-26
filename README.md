@@ -1,10 +1,10 @@
-# Shuchi Shukla — Portfolio
+# Shuchi Shukla -catch up
 
 Personal portfolio for **Shuchi Shukla**, AI Engineer · Data Scientist · Agentic AI Builder.
 
 Showcases experience, projects, tech stack, achievements, writing, and contact — built with React and deployed as a static site on GitHub Pages.
 
-**Live site:** [https://shuchi111.github.io/portfolio/](https://shuchi111.github.io/portfolio/)
+**Live site:** [https://shuchi111.github.io/app/](https://shuchi111.github.io/app/)
 
 ---
 
@@ -50,7 +50,7 @@ yarn install
 yarn start
 ```
 
-Open [http://localhost:3000/portfolio](http://localhost:3000/portfolio)
+Open [http://localhost:3000/app](http://localhost:3000/app)
 
 ### Production build (optional)
 
@@ -79,19 +79,7 @@ cp frontend/.env.example frontend/.env.local
 
 ## Deploy to GitHub Pages
 
-### 1. Rename the GitHub repo (one-time)
-
-If your repo is still named `app`, rename it on GitHub:
-
-1. Open **Settings → General → Repository name**
-2. Change `app` → **`portfolio`**
-3. Update your local remote:
-
-```bash
-git remote set-url origin https://github.com/shuchi111/portfolio.git
-```
-
-### 2. Push to GitHub
+### 1. Push to GitHub
 
 ```bash
 git add .
@@ -99,24 +87,30 @@ git commit -m "Deploy portfolio"
 git push origin main
 ```
 
-### 3. Make the repo public
+> **Important:** Enable GitHub Pages before the deploy job runs (see step 3 below).
+
+### 2. Make the repo public
 
 GitHub Pages on the free plan requires a **public** repository for personal sites.
 
 Go to **Settings → General → Change repository visibility → Public**.
 
-### 4. Enable GitHub Pages
+### 3. Enable GitHub Pages (required — fixes 404 deploy error)
 
-1. Open your repo on GitHub
-2. Go to **Settings → Pages**
-3. Under **Build and deployment → Source**, select **GitHub Actions**
+1. Open https://github.com/shuchi111/app/settings/pages
+2. Under **Build and deployment → Source**, select **GitHub Actions**
+3. Save — do **not** choose "Deploy from a branch"
 
-Every push to `main` triggers the workflow in `.github/workflows/deploy-pages.yml` and publishes the site.
+Every push to `main` triggers the workflow in `.github/workflows/deploy-pages.yml`.
+
+### 4. Re-run the workflow
+
+After enabling Pages, go to **Actions → Deploy portfolio to GitHub Pages → Re-run all jobs**.
 
 ### 5. Verify
 
 - Check the **Actions** tab for a green build
-- Visit [https://shuchi111.github.io/portfolio/](https://shuchi111.github.io/portfolio/)
+- Visit [https://shuchi111.github.io/app/](https://shuchi111.github.io/app/)
 
 ---
 
