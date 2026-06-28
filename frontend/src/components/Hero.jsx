@@ -4,9 +4,6 @@ import NeuralBackground from "./NeuralBackground";
 import Typewriter from "./Typewriter";
 import { profile } from "../data/portfolio";
 
-const FALLBACK_PHOTO =
-  "https://images.unsplash.com/photo-1771072426488-87e6bbcc0cf7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTB8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBwcm9mZXNzaW9uYWwlMjB3b21hbiUyMHBvcnRyYWl0JTIwZGFyayUyMGJhY2tncm91bmR8ZW58MHx8fHwxNzgxMTAxOTkzfDA&ixlib=rb-4.1.0&q=85";
-
 export default function Hero() {
   return (
     <section id="top" data-testid="hero" className="relative min-h-screen pt-28 pb-16 overflow-hidden">
@@ -108,7 +105,6 @@ export default function Hero() {
             <div className="relative border border-white/10 bg-zinc-950 overflow-hidden">
               <img
                 src={profile.photo}
-                onError={(e) => { if (e.currentTarget.src !== FALLBACK_PHOTO) e.currentTarget.src = FALLBACK_PHOTO; }}
                 alt="Shuchi Shukla portrait"
                 className="w-full h-[520px] object-cover object-top"
                 loading="eager"
